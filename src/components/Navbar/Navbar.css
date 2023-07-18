@@ -32,6 +32,11 @@
     width: 8.5rem;
     height: auto;
     cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    margin-top: .1rem;
+}
+.logo-img:hover {
+    border: 1px solid black;
 }
 
 .nav-links {
@@ -55,7 +60,6 @@
     cursor: pointer;
 }
 
-/* hamburget menu */
 
 .hamburger-menu {
     display: none;
@@ -289,7 +293,8 @@
 }
 
 .cart-icon {
-    position: relative
+    position: relative;
+    margin-top: .6rem;
 }
 
 .cart-icon::after {
@@ -322,10 +327,26 @@
     height: 10px;
     text-align: center;
     display: block;
+    animation: bounce 0.5s ease;
 }
 
-
-/* subtotal */
+@keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    30% {
+      transform: translateY(-20px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    70% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 
 .subtotal-div {
     display: flex;
