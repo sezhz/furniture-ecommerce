@@ -1,0 +1,73 @@
+.row-item {
+  outline: 2px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+.row-item:hover {
+  outline: 2px solid rgba(0, 0, 0, 0.7);
+}
+
+.trending {
+  padding-bottom: 10rem;
+}
+
+.item-header img {
+  width: 21rem;
+}
+
+.item-description {
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.trending h3 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 4.2rem !important;
+}
+
+.row-container {
+  display: flex;
+  gap: 2.2rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  position: relative;
+  padding: 1rem 0.6rem;
+}
+
+.row-container::-webkit-scrollbar {
+  display: none;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.title-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btns {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btns button {
+  color: white;
+  background-color: #373737;
+  padding: 1rem;
+  font-size: 1.5rem;
+  height: 4rem;
+  width: 4rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+
+.btns button:hover {
+  background-color: black;
+}
