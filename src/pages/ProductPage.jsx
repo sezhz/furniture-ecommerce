@@ -73,7 +73,7 @@ const ProductPage = () => {
               <div className="atc-buy">
                 <button
                   onClick={() => {
-                    addToCart(item[0]);
+                    addToCart(item[0], item.quantity);
                     showNotify();
                   }}
                   className="atc-btn"

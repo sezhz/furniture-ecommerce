@@ -58,6 +58,7 @@
 
 .nav-links i {
     cursor: pointer;
+    padding-top: 5px;
 }
 
 
@@ -294,7 +295,6 @@
 
 .cart-icon {
     position: relative;
-    margin-top: .6rem;
 }
 
 .cart-icon::after {
