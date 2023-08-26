@@ -4,14 +4,15 @@ import { items } from "../components/AllData";
 import TrendingSlider from "../components/Trending/TrendingSlider";
 import Feedback from "../components/Feedback/Feedback";
 import Footer from "../components/Footer/Footer";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 export const CartContext = createContext();
 
 const ProductPage = () => {
   const { id } = useParams();
   const item = items.filter((item) => item.id === parseInt(id));
-  
+  const navigate = useNavigate();
+
   const [quantity, setQuantity] = useState(1);
   const [image, setImage] = useState(item[0].img);
 
@@ -39,6 +40,10 @@ const ProductPage = () => {
     setNotify(!notify);
   };
 
+  const handleCheckoutClick = () => {
+    navigate("/ordering");
+  };
+
   return (
     <>
       <div
@@ -56,8 +61,7 @@ const ProductPage = () => {
               <div className="big-img">
                 <img src={image} alt="product" />
               </div>
-              <div className="small-imgs">
-              </div>
+              <div className="small-imgs"></div>
             </div>
             <div className="product-right">
               <p className="product-spec">{item[0].specs}</p>
@@ -80,7 +84,9 @@ const ProductPage = () => {
                 >
                   add to cart
                 </button>
-                <button className="buy-btn">buy now</button>
+                <button onClick={handleCheckoutClick} className="buy-btn">
+                  buy now
+                </button>
               </div>
             </div>
           </div>

@@ -1,0 +1,96 @@
+.ordering {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f7f7f785;
+}
+
+.order-header h1 {
+  font-size: 35px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.order-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  padding: 90px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .order-header h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .order-cont {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .order-cont input {
+    padding: 0 10px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .order-cont h2 {
+    font-size: 16px;
+  }
+
+  .order-cont button {
+    margin-top: 30px;
+    height: 40px;
+    width: 40%;
+  }
+
+  .order-cont p {
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+.order-cont input {
+  margin-bottom: 10px;
+  padding: 0 20px;
+  height: 45px;
+  background-color: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  transition: all 0.2s;
+  font-size: 18px;
+  text-align: center;
+}
+
+.order-cont h2 {
+  text-align: center;
+  font-size: 18px;
+}
+
+.order-cont button {
+  margin-top: 40px;
+  background-color: transparent;
+  border: 2px solid black !important;
+  height: 45px;
+  width: 30%;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.order-cont button:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.order-cont p {
+  margin-top: 20px;
+  font-size: 36px;
+  font-weight: 900;
+}

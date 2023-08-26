@@ -10,6 +10,7 @@ import Sideboards from "./components/CategoriesPages/Sideboards";
 import Furnitures from "./components/CategoriesPages/Furnitures";
 import Sofas from "./components/CategoriesPages/Sofas";
 import Tables from "./components/CategoriesPages/Tables";
+import Ordering from "./pages/Ordering";
 import ProductPage, { CartContext } from "./pages/ProductPage";
 
 const App = () => {
@@ -37,7 +38,6 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route index path="/" element={<Home />} />
-
         <Route path="categories" element={<Categories />}>
           <Route path="all" element={<All />} />
           <Route path="chairs" element={<Chairs />} />
@@ -48,6 +48,7 @@ const App = () => {
           <Route path="tables" element={<Tables />} />
         </Route>
         <Route path="categories/product/:id" element={<ProductPage />} />
+        <Route path="ordering" element={<Ordering />} />
       </Routes>
     </CartContext.Provider>
   );

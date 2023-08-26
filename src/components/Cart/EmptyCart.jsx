@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import EmptyCartImg from "../../img/cart/empty-cart.png";
 import React from "react";
 
@@ -6,7 +7,9 @@ const EmptyCart = ({ openCart }) => {
     <div className="empty-cart">
       <img src={EmptyCartImg} alt="empty-cart" />
       <p>your cart is empty</p>
-      <button onClick={openCart}>Keep Browsing</button>
+      <Link to="/categories/all">
+        <button onClick={openCart}>Keep Browsing</button>
+      </Link>
     </div>
   );
 };

@@ -33,7 +33,7 @@ const CartWithItems = () => {
           <p className="total-price">{totalPrice + ".00$"}</p>
         </div>
         <div className="sub-left">
-          <Link>Go to Checkout</Link>
+          <Link to='/ordering'>Go to Checkout</Link>
         </div>
       </div>
     </>
