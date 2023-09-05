@@ -1,11 +1,11 @@
-import CategoriesItemChairs from "./CategoriesItemChairs";
 import Footer from "../Footer/Footer";
 import Feedback from "../Feedback/Feedback";
+import CategoriesItem from "./CategoriesItem";
 
 const Chairs = () => {
   return (
     <>
-      <CategoriesItemChairs />
+      <CategoriesItem category="chair" />
       <Feedback />
       <Footer />
     </>

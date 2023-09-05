@@ -30,7 +30,7 @@
 
 .row-container {
   display: flex;
-  gap: 2.2rem;
+  gap: 25px;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
@@ -70,4 +70,32 @@
 
 .btns button:hover {
   background-color: black;
+}
+
+@media (max-width: 768px) {
+  .row-container {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    position: relative;
+    padding: 1rem 0.6rem;
+  }
+
+  .item-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .item-description {
+    text-align: center;
+  }
+
+  .row-item {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
 }

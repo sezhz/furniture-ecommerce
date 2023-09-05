@@ -1,39 +1,36 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import CartItem from "./CartItem";
-import { CartContext } from "../../pages/ProductPage";
+import { CartContext } from "./CartProvider";
 import EmptyCart from "./EmptyCart";
 import { Link } from "react-router-dom";
 
-const CartWithItems = () => {
-  const { cartItem, setCartItem } = useContext(CartContext);
+const CartWithItems = (props) => {
+  const { cartItem } = useContext(CartContext);
 
-  const [totalPrice, setTotalPrice] = useState(0);
-
-  useEffect(() => {
-    const newTotalPrice = cartItem.reduce((acc, item) => acc + item.price, 0);
-    setTotalPrice(newTotalPrice);
-  }, [cartItem]);
+  const totalItemsPrice = cartItem.reduce((total, item) => {
+    return total + item.quantity * item.price;
+  }, 0);
 
   return (
     <>
       <div className="full-cart-div">
         <div className="full-cart">
-          {cartItem.map((item, id) =>
-            cartItem.length !== 0 ? (
-              <CartItem key={id} item={item} setCartItem={setCartItem} />
-            ) : (
-              <EmptyCart key={id} />
-            )
+          {cartItem.length > 0 ? (
+            cartItem.map((item) => <CartItem key={item.id} item={item} />)
+          ) : (
+            <EmptyCart />
           )}
         </div>
       </div>
       <div className="subtotal-div">
         <div className="sub-right">
           <p>Subtotal</p>
-          <p className="total-price">{totalPrice + ".00$"}</p>
+          <p className="total-price">{totalItemsPrice.toFixed(2)}$</p>
         </div>
         <div className="sub-left">
-          <Link to='/ordering'>Go to Checkout</Link>
+          <Link to="/ordering" onClick={() => props.closeCart()}>
+            Go to Checkout
+          </Link>
         </div>
       </div>
     </>
@@ -41,3 +38,4 @@ const CartWithItems = () => {
 };
 
 export default CartWithItems;
+

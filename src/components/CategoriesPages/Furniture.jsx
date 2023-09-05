@@ -1,15 +1,15 @@
-import CategoriesItemFurnitures from "./CategoriesItemFurnitures";
 import Footer from "../Footer/Footer";
 import Feedback from "../Feedback/Feedback";
+import CategoriesItem from "./CategoriesItem";
 
-const Furnitures = () => {
+const Furniture = () => {
   return (
     <>
-      <CategoriesItemFurnitures />
+      <CategoriesItem category="furniture" />
       <Feedback />
       <Footer />
     </>
   );
 };
 
-export default Furnitures;
+export default Furniture;

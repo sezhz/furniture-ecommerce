@@ -14,7 +14,7 @@ const CategoriesHeader = () => {
         <div className="catego-header">
           <div className="title-home">
             <Link onClick={() => window.scrollTo(0, 0)} to="/">
-              <i className="fa-solid fa-angle-left"></i>Home
+              <i className="fa-solid fa-angle-left"></i> HOME
             </Link>
             <h3>{btnName}</h3>
           </div>
@@ -37,8 +37,8 @@ const CategoriesHeader = () => {
             <Link to="footstools" onClick={() => handleBtnName("footstools")}>
               <button>Footstool</button>
             </Link>
-            <Link to="furnitures" onClick={() => handleBtnName("furniture")}>
-              <button>Furnitures</button>
+            <Link to="furniture" onClick={() => handleBtnName("furniture")}>
+              <button>Furniture</button>
             </Link>
           </div>
         </div>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap");
 
 * {
   margin: 0;
@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
   position: relative;
 }
 
@@ -16,7 +16,6 @@ html {
   font-size: 62.5%;
 }
 
-/* global */
 .container {
   max-width: 1200px;
   margin: 0 auto;

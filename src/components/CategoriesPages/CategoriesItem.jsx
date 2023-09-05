@@ -1,8 +1,9 @@
+import React from "react";
 import { Link } from "react-router-dom";
-import { items } from '../AllData';
+import { items } from "../AllData";
 
-function CategoriesItem() {
-  const filteredItems = items.filter((item) => item.category === "furniture");
+function CategoriesItem({ category }) {
+  const filteredItems = items.filter((item) => item.category === category);
   return (
     <>
       <div className="popular-container">

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import CartWithItems from "../Cart/CartWithItems";
 import EmptyCart from "../Cart/EmptyCart";
-import { CartContext } from "../../pages/ProductPage";
+import { CartContext } from "../Cart/CartProvider";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
@@ -13,6 +13,11 @@ const Navbar = () => {
   const [mobileNav, setMobileNav] = useState(false);
 
   const { cartItem } = useContext(CartContext);
+
+  const totalQuantity = cartItem.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
 
   const handleScroll = () => {
     if (window.scrollY > 10) {
@@ -105,19 +110,19 @@ const Navbar = () => {
                 product page
               </Link>
               <i
-                data-array-length={cartItem.length}
+                data-array-length={totalQuantity}
                 onClick={openCart}
                 className={`fa-solid fa-cart-shopping ${
-                  cartItem.length < 1 ? "cart-icon" : "cart-icon with-items"
+                  totalQuantity < 1 ? "cart-icon" : "cart-icon with-items"
                 }`}
               ></i>
             </div>
             <div className="hamburger-menu">
               <i
-                data-array-length={cartItem.length}
+                data-array-length={totalQuantity}
                 onClick={openCart}
                 className={`fa-solid fa-cart-shopping hamburger-cart ${
-                  cartItem.length < 1 ? "cart-icon" : "cart-icon with-items"
+                  totalQuantity < 1 ? "cart-icon" : "cart-icon with-items"
                 }`}
               ></i>
               <i

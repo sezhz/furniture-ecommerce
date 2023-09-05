@@ -1,11 +1,11 @@
-import CategoriesItemSideboards from "./CategoriesItemSideboards";
 import Footer from "../Footer/Footer";
 import Feedback from "../Feedback/Feedback";
+import CategoriesItem from "./CategoriesItem";
 
 const Sideboards = () => {
   return (
     <>
-      <CategoriesItemSideboards />
+      <CategoriesItem category="sideboard" />
       <Feedback />
       <Footer />
     </>

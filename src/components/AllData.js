@@ -171,7 +171,7 @@ export const items = [
   },
   {
     id: 14,
-    category: "chairs",
+    category: "chair",
     img: Img14,
     description: "Cute armchair",
     price: 660,

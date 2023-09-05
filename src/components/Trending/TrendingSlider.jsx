@@ -1,16 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import TrendingItem from "./TrendingItem";
 import "./TrendingSlider.css";
 
 const TrendingSlider = () => {
+  const [scrollDistance, setScrollDistance] = useState(235);
+
   const slideLeft = () => {
     let slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft - 235;
+    slider.scrollLeft = slider.scrollLeft - scrollDistance;
   };
   const slideRight = () => {
     let slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft + 235;
+    slider.scrollLeft = slider.scrollLeft + scrollDistance;
   };
+
+  useEffect(() => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth <= 768) {
+      setScrollDistance(350)
+    }
+  }, []);
 
   return (
     <div className="trending">

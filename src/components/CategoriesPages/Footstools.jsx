@@ -1,11 +1,11 @@
-import CategoriesItemFootstools from './CategoriesItemFootstools';
 import Footer from "../Footer/Footer";
 import Feedback from "../Feedback/Feedback";
+import CategoriesItem from "./CategoriesItem";
 
 const Footstools = () => {
   return (
     <>
-      <CategoriesItemFootstools />
+      <CategoriesItem category="footstool" />
       <Feedback />
       <Footer />
     </>
